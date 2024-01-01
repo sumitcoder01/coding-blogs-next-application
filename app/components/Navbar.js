@@ -25,6 +25,7 @@ export default function Navbar() {
           Contact
         </span>
       </Link>
+      <hr className='text-blue-600'/>
     </div>
   </div>
 </nav>
