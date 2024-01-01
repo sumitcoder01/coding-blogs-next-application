@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Contact() {
-  const API = process.env.API;
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,26 +14,27 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const handleOnSubmit = async () => {
-    const res = await fetch(API + "/contact", {
-      method: 'PUT',
+    const res = await fetch(`http://localhost:3000/api/contact`, {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({...formData}),
     })
     const response = await res.json();
+        setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+    })
     if (response.success) {
       toast.success(response.message);
     }
     else {
       toast.error(response.error);
     }
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-    })
+
   }
   return (
     <div className='p-4 min-h-[527px]'>

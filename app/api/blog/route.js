@@ -1,12 +1,13 @@
 import connectToMongo from "@/lib/db/db";
 import Blog from "@/lib/models/Blog";
 import { NextResponse } from "next/server";
-import { useSearchParams } from 'next/navigation';
-export async function GET(_req) {
+export async function GET(req) {
     try {
         connectToMongo();
         console.log("Connect to MongoDB Successfully");
-        const blogs = await Blog.find();
+        const searchParams = req.nextUrl.searchParams;
+        const limit = Number(searchParams.get('limit')) || 0;
+        const blogs = limit > 0 ? await Blog.find().limit(limit) : await Blog.find();
         return NextResponse.json({ success: true, blogs: blogs }, { status: 200 });
     } catch (error) {
         console.log(error);
