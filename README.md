@@ -41,10 +41,11 @@ This repository contains the source code for a Coding Blogs application built us
     ```bash
         npm install
 
-### Usage
+3. Usage:
     ```bash
         npm run dev
 
+## view 
 -Visit http://localhost:3000 in your browser.
 
 ## Project Structure
@@ -63,10 +64,10 @@ coding-blogs-next-application/
 |   |-- layout.js
 |   |-- page.js
 |-- .gitignore
-|-- .gitignore
 |-- .env.local
 |-- package.json
 |-- README.md
+
 
 ## Technologies Used
 
