@@ -6,7 +6,7 @@ const getBlogs = async () => {
   try {
     const API = process.env.API;
     
-    const res = await fetch(`${API}/blog?limit=3`,{
+    const res = await fetch(`${API}/blog/latest`,{
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

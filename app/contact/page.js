@@ -22,7 +22,7 @@ export default function Contact() {
       body: JSON.stringify({...formData}),
     })
     const response = await res.json();
-        setFormData({
+    setFormData({
       name: '',
       email: '',
       phone: '',
