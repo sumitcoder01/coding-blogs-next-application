@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Coding Blogs Next.js Application
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+
+## Introduction
+
+This repository contains the source code for a Coding Blogs application built using Next.js.
+
+## Features
+
+- List key features and functionalities of the application.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   git clone https://github.com/sumitcoder01/coding-blogs-next-application.git
 
-## Learn More
+2. Change to the project directory:
+    ```bash
+      cd coding-blogs-next-application
 
-To learn more about Next.js, take a look at the following resources:
+3. Install dependencies:
+    ```bash
+        npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Usage
+    ```bash
+        npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-Visit http://localhost:3000 in your browser.
 
-## Deploy on Vercel
+## Project Structure
+coding-blogs-next-application/
+|-- public/
+|   |-- image/
+|-- app/
+|   |-- components/
+|   |-- about/
+|   |-- api/
+|   |-- blog/
+|   |-- blogPost/
+|   |-- contact/
+|   |-- favicon.ico
+|   |-- global.css
+|   |-- layout.js
+|   |-- page.js
+|-- .gitignore
+|-- .gitignore
+|-- .env.local
+|-- package.json
+|-- README.md
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Technologies Used
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- React
+- Next
