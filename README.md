@@ -73,3 +73,4 @@ coding-blogs-next-application/
 
 - React
 - Next
+- Tailwindcss
