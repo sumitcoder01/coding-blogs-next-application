@@ -1,9 +1,13 @@
 import BlogCard from "../components/BlogCard";
 import Link from "next/link";
+import { BASE_URL } from "@/confiq/apiUrl";
+
+export const dynamic = 'force-dynamic';
+
 const getBlogs = async () => {
   let blogs = []
   try {
-    const API = process.env.API;
+    const API = BASE_URL;
     const res = await fetch(API + "/blog", {
       method: 'GET',
       headers: {

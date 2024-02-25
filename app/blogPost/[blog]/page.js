@@ -1,7 +1,11 @@
+import { BASE_URL } from "@/confiq/apiUrl";
+
+export const dynamic = 'force-dynamic';
+
 const getBlog = async (slug) => {
   let blog = null
   try {
-    const API = process.env.API;
+    const API = BASE_URL;
     const res = await fetch(API + "/blog/" +slug, {
       method: 'GET',
       headers: {

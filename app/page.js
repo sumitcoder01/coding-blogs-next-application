@@ -1,17 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BASE_URL } from "@/confiq/apiUrl";
+
+export const dynamic = 'force-dynamic';
 
 const getBlogs = async () => {
   let blogs = []
   try {
-    const API = process.env.API;
+    const API = BASE_URL;
     
-    const res = await fetch(`${API}/blog/latest`,{
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
+    const res = await fetch(`${API}/blog/latest`);
     const response = await res.json();
     if (response.success) {
       blogs = response.blogs;

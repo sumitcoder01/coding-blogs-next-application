@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { BASE_URL } from "@/confiq/apiUrl";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,11 +16,9 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const handleOnSubmit = async () => {
-    const res = await fetch(`http://localhost:3000/api/contact`, {
+    const API = BASE_URL;
+    const res = await fetch(`${API}/contact`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
       body: JSON.stringify({...formData}),
     })
     const response = await res.json();
