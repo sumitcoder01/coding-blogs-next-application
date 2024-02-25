@@ -5,7 +5,6 @@ import { NextResponse } from "next/server";
 export async function GET(_req, { params }) {
   try {
     connectToMongo();
-    console.log("Connected to MongoDB Successfully");
     const slug = params.slug;
     let blog = await Blog.findOne({ slug });
     return NextResponse.json({ success: true, blogs: blog }, { status: 200 });

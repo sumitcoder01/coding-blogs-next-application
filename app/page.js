@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BASE_URL } from "@/confiq/apiUrl";
-
+import logo from '../public/image/home1.png';
 export const dynamic = 'force-dynamic';
 
 const getBlogs = async () => {
@@ -25,7 +25,7 @@ export default async function Home() {
     <div className="p-4 min-h-[527px] bg-gray-100 rounded-xl shadow-lg">
       <div className="container mx-auto flex flex-col items-center justify-center space-y-4 text-center">
         <div className="relative w-36 h-32 overflow-hidden rounded-2xl">
-          <Image src='/image/home1.png' className="rounded-2xl" layout='fill' objectFit='cover' alt='Home Image' />
+          <Image src={logo} className="rounded-2xl" layout='fill' objectFit='cover' alt='Home Image' />
         </div>
         <h2 className="text-xl font-italic text-gray-700">{'< Coding Blogs />'}</h2>
         <h1 className="text-3xl font-bold text-gray-800">Latest Blogs</h1>
