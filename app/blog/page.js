@@ -1,6 +1,6 @@
 import BlogCard from "../components/BlogCard";
 import Link from "next/link";
-import { BASE_URL } from "@/confiq/apiUrl";
+import { BASE_URL } from "@/confiq/apiurl";
 
 export const dynamic = 'force-dynamic';
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BASE_URL } from "@/confiq/apiUrl";
+import { BASE_URL } from "@/confiq/apiurl";
 import logo from '../public/image/home1.png';
 export const dynamic = 'force-dynamic';
 

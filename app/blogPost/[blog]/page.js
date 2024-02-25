@@ -1,4 +1,4 @@
-import { BASE_URL } from "@/confiq/apiUrl";
+import { BASE_URL } from "@/confiq/apiurl";
 
 export const dynamic = 'force-dynamic';
 

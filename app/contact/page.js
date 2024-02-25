@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { BASE_URL } from "@/confiq/apiUrl";
+import { BASE_URL } from "@/confiq/apiurl";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
